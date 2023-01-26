@@ -12,12 +12,13 @@ public class SomeBusiness {
         this.someDataService = someDataService;
     }
 
-    public int calculateSum(int[] data){
+    public int calculateSum(int[] data) {
         return Arrays.stream(data)
-                .sum();
+                .reduce(Integer::sum)
+                .orElse(0);
     }
 
-    public int calculateSumUsingDataService(){
+    public int calculateSumUsingDataService() {
         int[] data = someDataService.retrieveAllData();
         return Arrays.stream(data)
                 .sum();
