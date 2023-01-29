@@ -30,10 +30,5 @@ public class AssertJTest {
 
         assertThat("123").containsOnlyDigits();
         assertThat("A BC").containsWhitespaces();
-
-        //assertThat("", blankString());
-        //assertThat("ABCDE", containsString("BCD"));
-        //assertThat("ABCDE", startsWith("ABC"));
-        //assertThat("ABCDE", endsWith("CDE"));
     }
 }
